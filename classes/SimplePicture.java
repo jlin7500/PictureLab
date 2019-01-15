@@ -16,7 +16,6 @@ import java.awt.geom.*;
  */
 public class SimplePicture implements DigitalPicture
 {
-  
   /////////////////////// Fields /////////////////////////
   
   /**
