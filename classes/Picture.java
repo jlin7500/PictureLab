@@ -179,15 +179,17 @@ public class Picture extends SimplePicture
     for (int row = 27; row < 97; row++)
     {
       // loop from 13 to just before the mirror point
+      count++;
       for (int col = 13; col < mirrorPoint; col++)
       {
-        
+        count++;
         leftPixel = pixels[row][col];      
         rightPixel = pixels[row]                       
                          [mirrorPoint - col + mirrorPoint];
         rightPixel.setColor(leftPixel.getColor());
       }
     }
+    System.out.println(count);
   }
   
   /** copy from the passed fromPic to the
@@ -197,8 +199,7 @@ public class Picture extends SimplePicture
     * @param startRow the start row to copy to
     * @param startCol the start col to copy to
     */
-  public void copy(Picture fromPic, 
-                 int startRow, int startCol)
+  public void copy(Picture fromPic, int startRow, int startCol)
   {
     Pixel fromPixel = null;
     Pixel toPixel = null;
@@ -209,7 +210,7 @@ public class Picture extends SimplePicture
          toRow < toPixels.length; 
          fromRow++, toRow++)
     {
-      for (int fromCol = 0, toCol = startCol; 
+      for (int fromCol = 0, toCol = startCol;
            fromCol < fromPixels[0].length &&
            toCol < toPixels[0].length;  
            fromCol++, toCol++)
