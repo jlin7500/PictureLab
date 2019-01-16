@@ -64,6 +64,13 @@ public class PictureTester
     caterpillar.mirrorHorizontal();
     caterpillar.explore();
   }
+  public static void testMirrorHorizontalBotToTop()
+  {
+    Picture caterpillar = new Picture("redMotorcycle.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorHorizontalBotToTop();
+    caterpillar.explore();
+  }
 
   /** Main method for testing.  Every class can have a main
     * method in Java */
@@ -79,9 +86,10 @@ public class PictureTester
     //testNegate();
     //testGrayscale();
     //testFixUnderwater();
-   // testMirrorVertical();
-    //testMirrorVerticalRightToLeft();
-    testMirrorHorizontal();
+    //testMirrorVertical();
+    testMirrorVerticalRightToLeft();
+    //testMirrorHorizontal();
+    //testMirrorHorizontalBotToTop();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
